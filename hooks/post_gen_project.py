@@ -93,14 +93,14 @@ if '{{ cookiecutter.use_logrus_logging }}'.lower() != 'y':
 if '{{ cookiecutter.use_cobra_cmd }}'.lower() != 'y':
     remove_cobra_files()
 
-# 5. Remove unused ci choice
-if '{{ cookiecutter.use_ci}}'.lower() == 'travis':
-    remove_circleci_files()
-elif '{{ cookiecutter.use_ci}}'.lower() == 'circle':
-    remove_file(".travis.yml")
-else:
-    remove_file(".travis.yml")
-    remove_circleci_files()
+# # 5. Remove unused ci choice
+# if '{{ cookiecutter.use_ci}}'.lower() == 'travis':
+#     remove_circleci_files()
+# elif '{{ cookiecutter.use_ci}}'.lower() == 'circle':
+#     remove_file(".travis.yml")
+# else:
+#     remove_file(".travis.yml")
+#     remove_circleci_files()
 
 # 6. Remove files depending on selection of mod or dep
 if '{{ cookiecutter.go_mod_or_dep}}'.lower() == 'mod':
