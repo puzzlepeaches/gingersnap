@@ -7,25 +7,26 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// cfgFile is a string variable to hold the path of the configuration file
 var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
+// It is the entry point for the cobra application
 var rootCmd = &cobra.Command{
-	Use:   "generated code example",
-	Short: "A brief description of your application",
+	Use:   "{{cookiecutter.app_name}}",
+	Short: "Short description of your application",
 	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+examples and usage of using your application. For example:`
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	//      Run: func(cmd *cobra.Command, args []string) { },
+
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
+// If there is an error during the execution, it will print the error and exit with status 1
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
@@ -33,6 +34,8 @@ func Execute() {
 	}
 }
 
+// init function to initialize the cobra application
+// It will be called only once before running the command
 func init() {
 	cobra.OnInitialize()
 
