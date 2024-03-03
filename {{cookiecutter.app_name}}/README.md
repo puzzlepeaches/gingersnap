@@ -2,17 +2,37 @@
 
 {{cookiecutter.project_short_description}}
 
-## Getting started
 
-This project requires Go to be installed. On OS X with Homebrew you can just run `brew install go`.
+## About
 
-Running it then should be as simple as:
+Some notes about the tool:
 
-```console
-$ make
-$ ./bin/{{cookiecutter.app_name}}
+
+## Install
+
+Build manually:
+
+```bash
+git clone git@gitlab.com:sprocketsecurity/hackers/{{cookiecutter.app_name}}.git
+cd {{cookiecutter.app_name}} 
+go install
 ```
 
-### Testing
+## Usage
 
-``make test``
+Basic usage:
+
+```bash
+{{cookiecutter.app_name}} 
+```
+
+
+## Help menu:
+    
+```bash
+```
+
+## Output
+
+```bash
+```
